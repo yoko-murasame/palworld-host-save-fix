@@ -1,5 +1,15 @@
 # Palworld Host Save Fix
 
+https://www.saraba1st.com/2b/thread-2168983-1-1.html
+https://forum.gamer.com.tw/C.php?bsn=71458&snA=90
+
+Fix Cmd:
+
+```cmd
+# 把原始存档放入todo目录放进去，后面id是新的用户存档文件名（UUID去掉后缀）
+python fix-host-save.py "./bin/uesave.exe" "./todo" 7BE9DBDF000000000000000000000000
+```
+
 ### **\*Experimental\***
 
 Palworld save files treat the co-op host differently. This fix makes the co-op host like any other player. Useful for migrating maps to dedicated servers and potentially to another player's computer.
