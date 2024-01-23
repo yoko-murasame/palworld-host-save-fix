@@ -14,7 +14,8 @@ Fix Cmd:
 # 6.执行如下命令：python fix-host-save.py "./bin/uesave.exe" "./todo" （UUID的存档）
 python fix-host-save.py "./bin/uesave.exe" "./todo" FFB89CF5000000000000000000000000
 # 7.可以发现 Players 目录中的 000000000000000001.sav 不见了，现在已经成功覆盖到（UUID的存档.sav）
-# 8.开始游戏
+# 8.把执行完命令后的 todo 目录里的所有文件，覆盖回服务器上
+# 9.开始游戏
 ```
 
 ### **\*Experimental\***
