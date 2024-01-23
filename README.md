@@ -6,8 +6,15 @@ https://forum.gamer.com.tw/C.php?bsn=71458&snA=90
 Fix Cmd:
 
 ```cmd
-# 把原始存档放入todo目录放进去，后面id是新的用户存档文件名（UUID去掉后缀）
-python fix-host-save.py "./bin/uesave.exe" "./todo" 7BE9DBDF000000000000000000000000
+# 1.把原始存档（UUID的目录）复制到服务器，注意原始存档的 Players 目录中有 000000000000000001.sav 这个存档，就是为了把这个恢复到指定 .sav 文件中
+# 2.删除 WorldOption.sav 文件
+# 3.修改 PalServer\Pal\Saved\Config\WindowsServer\GameUserSettings.ini -> DedicatedServerName=（UUID的目录），然后重启服务
+# 4.登陆一次游戏，这时候会生成一个新的（UUID的存档.sav）
+# 5.把服务器上的整个（UUID的目录）复制到当前工程 todo 目录里
+# 6.执行如下命令：python fix-host-save.py "./bin/uesave.exe" "./todo" （UUID的存档）
+python fix-host-save.py "./bin/uesave.exe" "./todo" FFB89CF5000000000000000000000000
+# 7.可以发现 Players 目录中的 000000000000000001.sav 不见了，现在已经成功覆盖到（UUID的存档.sav）
+# 8.开始游戏
 ```
 
 ### **\*Experimental\***
